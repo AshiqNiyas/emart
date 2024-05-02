@@ -16,7 +16,11 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://checkout.stripe.com"],
+    origin: [
+      "http://localhost:5173",
+      "https://checkout.stripe.com",
+      "https://emart-eight.vercel.app",
+    ],
     methods: ["POST", "PUT", "DELETE", "GET"],
     credentials: true,
   })
