@@ -19,7 +19,7 @@ function Sidecart({ cartShow, setCartShow }) {
       return toast.error("Login to continue");
     }
     const response = await axios.post(
-      "http://localhost:3001/checkout",
+      "https://emart-backend-seven.vercel.app/checkout",
       { cart },
       {
         withCredentials: true,

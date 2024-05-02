@@ -39,7 +39,7 @@ function Addproduct() {
     e.preventDefault();
     setLoading(true);
     const res = await axios.post(
-      "http://localhost:3001/products",
+      "https://emart-backend-seven.vercel.app/products",
       {
         ...productInfo,
         image: image,

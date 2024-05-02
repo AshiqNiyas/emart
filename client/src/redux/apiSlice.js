@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const usersApi = createApi({
   reducerPath: "usersApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001/users",
+    baseUrl: "https://emart-backend-seven.vercel.app/users",
   }),
   endpoints: (builder) => ({
     register: builder.mutation({
@@ -42,7 +42,7 @@ export const usersApi = createApi({
 export const productsApi = createApi({
   reducerPath: "productsApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3001/products",
+    baseUrl: "https://emart-backend-seven.vercel.app/products",
   }),
   endpoints: (builder) => ({
     addProduct: builder.mutation({
