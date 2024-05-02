@@ -27,11 +27,13 @@ function Sidemenu({ nav, setNav, userInfo }) {
       </div>
 
       {userInfo ? (
-        <Link to={"/profile"}>{userInfo.username}</Link>
+        <>
+          <Link to={"/profile"}>{userInfo.username}</Link>
+          {userInfo.isAdmin && <Link to={"/admin"}>Admin panel</Link>}
+        </>
       ) : (
         <Link to={"/auth"}>Sign in</Link>
       )}
-      {userInfo.isAdmin && <Link to={"/admin"}>Admin panel</Link>}
       <Link to={"/products"}>Products</Link>
       {userInfo && <button onClick={handleLogout}>Logout</button>}
     </div>

@@ -82,8 +82,12 @@ function Navbar() {
               <button onClick={() => navigate("/auth")}>Sign in</button>
             )}
           </div>
-          <div className="relative md:hidden" onClick={() => setNav(!nav)}>
-            <IoMenuOutline size={28} className="cursor-pointer" />
+          <div className="relative md:hidden">
+            <IoMenuOutline
+              size={28}
+              onClick={() => setNav(!nav)}
+              className="cursor-pointer"
+            />
             {nav ? (
               <Sidemenu nav={nav} setNav={setNav} userInfo={userInfo} />
             ) : null}
