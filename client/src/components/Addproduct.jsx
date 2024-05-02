@@ -89,7 +89,7 @@ function Addproduct() {
           rows="5"
           placeholder="Enter description for the product..."
         ></textarea>
-        <div className="flex justify-between w-[80%] mx-auto">
+        <div className="flex flex-col gap-2 md:flex-row justify-between w-[80%] mx-auto">
           <input
             name="category"
             value={productInfo.category}
@@ -107,7 +107,7 @@ function Addproduct() {
             className="outline-none border border-gray-300 h-8"
           />
         </div>
-        <div className="flex justify-between w-[80%] mx-auto">
+        <div className="flex flex-col md:flex-row gap-2 justify-between w-[80%] mx-auto">
           <input
             name="price"
             value={productInfo.price}
