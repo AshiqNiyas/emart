@@ -28,13 +28,23 @@ function Sidemenu({ nav, setNav, userInfo }) {
 
       {userInfo ? (
         <>
-          <Link to={"/profile"}>{userInfo.username}</Link>
-          {userInfo.isAdmin && <Link to={"/admin"}>Admin panel</Link>}
+          <Link onClick={() => setNav(!nav)} to={"/profile"}>
+            {userInfo.username}
+          </Link>
+          {userInfo.isAdmin && (
+            <Link onClick={() => setNav(!nav)} to={"/admin"}>
+              Admin panel
+            </Link>
+          )}
         </>
       ) : (
-        <Link to={"/auth"}>Sign in</Link>
+        <Link onClick={() => setNav(!nav)} to={"/auth"}>
+          Sign in
+        </Link>
       )}
-      <Link to={"/products"}>Products</Link>
+      <Link onClick={() => setNav(!nav)} to={"/products"}>
+        Products
+      </Link>
       {userInfo && <button onClick={handleLogout}>Logout</button>}
     </div>
   );
