@@ -10,7 +10,7 @@ function Home() {
         {userInfo?.username && `Welcome ${userInfo.username} to e-mart`}
       </div>
       <h4 className="text-xl text-center font-montserrat">Latest products</h4>
-      <div className="   text-gray-600  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-5">
+      <div className="   text-gray-600  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 p-5">
         {products
           ?.slice(1)
           .slice(-5)
@@ -23,7 +23,7 @@ function Home() {
           })}
       </div>
       <h4 className="text-xl text-center font-montserrat">Laptops</h4>
-      <div className="text-gray-600  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-5">
+      <div className="text-gray-600  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-5">
         {products
           ?.filter((product) => product.category == "Laptop")
           .slice(1)
@@ -37,7 +37,7 @@ function Home() {
           })}
       </div>
       <h4 className="text-xl text-center font-montserrat">Trending Mobiles</h4>
-      <div className="text-gray-600  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 p-5">
+      <div className="text-gray-600  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-5">
         {products
           ?.filter((product) => product.category == "Mobile")
           .slice(1)
